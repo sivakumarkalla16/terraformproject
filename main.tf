@@ -1,25 +1,13 @@
 provider "aws" {
 region = "ap-south-1"
-access_key = "AKIATTAU7W3M74WQ2CRB"
-secret_key = "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"
+access_key = "AKIARU5W5FX3OJQKGH7X"
+secret_key = "JJPj1iG7d8oPbD3z4wKqZ4+xpF+eMEMr4ZCRHmet"
 }
 
 resource "aws_instance" "ec2_example" {
-  ami                    = "ami-0cca134ec43cf708f"
+  ami                    = "ami-0d81306eddc614a45"
   instance_type          = var.instance_type
   tags = {
     Name = "Terraform EC2"
   }
 }
-
-resource "aws_ebs_volume" "example" {
-  availability_zone = "ap-south-1a"
-  size              = 40
-
-  tags = {
-    Name = "HelloWorld"
-  }
-}
-
-
-
